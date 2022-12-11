@@ -1,16 +1,8 @@
-﻿// Программа, которая принимает на вход пятизначное число и проверяет, является ли оно полиндромом 
-// (симметричным числом)
-System.Console.WriteLine("Введите координату x точки А");
-int xa = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите координату y точки А");
-int ya = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите координату z точки А");
-int za = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите координату x точки B");
-int xb = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите координату y точки B");
-int yb = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите координату z точки B");
-int zb = Convert.ToInt32(Console.ReadLine());
-double distance = Math.Sqrt(Math.Pow(xb-xa,2)+Math.Pow(yb-ya,2)+Math.Pow(zb-za,2));
-System.Console.WriteLine($"Расстояние между точками = {Math.Round(distance, 2)}");
+﻿// Программа, которая принимает на вход число N и выдаёт таблицу кубов чисел от 1 до N.
+System.Console.WriteLine("Введите число");
+int N = Convert.ToInt32(Console.ReadLine());
+for (int i = 1; i <= N; i++)
+{
+    if (i==N) System.Console.Write($"{Math.Pow(i, 3)}.");
+    else System.Console.Write($"{Math.Pow(i, 3)}, ");
+}
